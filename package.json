@@ -1,0 +1,37 @@
+{
+  "name": "codecat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@types/koa-bodyparser": "^5.0.1",
+    "@types/koa-logger": "^3.1.0",
+    "@types/koa-router": "^7.0.31",
+    "http-proxy": "^1.17.0",
+    "koa": "^2.5.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-logger": "^3.2.0",
+    "koa-router": "^7.4.0",
+    "mysql": "^2.16.0",
+    "request": "^2.88.0",
+    "typeorm": "^0.2.7"
+  },
+  "scripts": {
+    "start": "npm run serve",
+    "serve": "node dist/server.js",
+    "run": "./node_modules/.bin/nodemon dist/server.js",
+    "build": "npm run tslint && npm run build-ts",
+    "build-ts": "tsc",
+    "watch": "npm run tslint && npm run watch-ts",
+    "watch-ts": "tsc -w",
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.0.46",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.1"
+  },
+  "author": "qj",
+  "license": "ISC"
+}
